@@ -17,5 +17,31 @@
             <p>Con todo mi corazoncito</p>
         </div>
     </div>
+
+      <!-- BOTÓN PARA MÚSICA -->
+  <div style="position: absolute; bottom: 20px; width: 100%; text-align:center;">
+    <button id="playBtn"
+      style="padding:10px 20px; font-size:16px; border:none;
+             background:white; color:red; border-radius:8px;
+             font-family:'Galada', cursive;">
+      Preciona aqui Mi amor
+    </button>
+  </div>
+  <!-- AUDIO OCULTO -->
+    <audio id="music" loop>
+    <source src="My Kind Of Woman.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+    </audio>
+
+    <script>
+    const btn = document.getElementById('playBtn');
+    const audio = document.getElementById('music');
+    btn.addEventListener('click', () => {
+        audio.play().catch(err => console.error('Error al reproducir:', err));
+    });
+
+    </script>
+</script>
+    
 </body>
 </html>
